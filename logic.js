@@ -18,4 +18,15 @@ document.getElementById('two').onclick = new EventCallback(function (evt) {
     })
 });
 
+let moveEvent = new EventCallback(function (evt) {
+    return new Promise(function (resolve) {
+        setTimeout(function () {
+            console.log('cb');
+            resolve();
+        }, 300);
+    }), {
+        timeout: 320
+    }
+});
+document.getElementById('mouseArea').onmousemove = moveEvent;
 export default EventCallback;
