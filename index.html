@@ -1,0 +1,40 @@
+<html>
+
+<body>
+    <style>
+        #one {
+            background-color: red;
+        }
+
+        #two {
+            background-color: blue;
+        }
+    </style>
+    <script>
+        function formSubmit() {
+            console.log('submit', arguments);
+            console.log('submitted');
+            alert('formSubmitted');
+            return false;
+        }
+
+        function handlerTwo() {
+            alert('handlerTwo');
+            console.log('handlerTwo', arguments);
+        }
+    </script>
+    <script type=module>
+        import EventCallback from './logic.js';
+    </script>
+    <form onsubmit="formSubmit(event);return false;">
+        <input type="checkbox" id="defaultPrevented" checked>
+        <label for="defaultPrevented">defaultPrevented</label>
+        <input type="checkbox" id="propagationStopped" checked>
+        <label for="propagationStopped">propagationStopped</label>
+        <div id="one" onclick="handlerTwo(event)">form content
+            <button id="two" type="submit" onclick="handler2(event)">click me for test</button>
+        </div>
+    </form>
+</body>
+
+</html>
