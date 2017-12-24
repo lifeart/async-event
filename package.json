@@ -1,0 +1,32 @@
+{
+  "name": "async-event",
+  "version": "1.0.0",
+  "description": "Async event wrapper",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lifeart/async-event.git"
+  },
+  "keywords": [
+    "js",
+    "async",
+    "events"
+  ],
+  "author": "Aleksandr Kanunnikov <lifeart92@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lifeart/async-event/issues"
+  },
+  "homepage": "https://github.com/lifeart/async-event#readme",
+  "devDependencies": {
+    "microbundle": "^0.2.4"
+  }
+}
